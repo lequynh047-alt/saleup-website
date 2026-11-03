@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SALEUP PTY LTD — Software for Australian local businesses</title>
+<meta name="description" content="SALEUP PTY LTD is a Gold Coast software company building ChillBoss, the AI front desk for Australian local businesses: AI receptionist, online booking, customer management and SMS & email marketing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23143d59'/%3E%3Cpath d='M20 40c3 3 7 4 12 4 6 0 10-3 10-8 0-11-20-6-20-15 0-4 4-7 9-7 4 0 7 1 10 3' stroke='%23f4b41a' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10212f;
+    --muted: #546474;
+    --navy: #143d59;
+    --gold: #f4b41a;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --soft: #f5f8fb;
+    --rose: #a5426d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--navy); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header.top { position: sticky; top: 0; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); z-index: 10; }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .02em; color: var(--navy); text-decoration: none; font-size: 18px; }
+  .logo span.mark { width: 34px; height: 34px; border-radius: 9px; background: var(--navy); display: grid; place-items: center; color: var(--gold); font-weight: 800; }
+  nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 15px; }
+  nav a:hover { color: var(--ink); }
+  .hero { padding: 88px 0 72px; background: linear-gradient(180deg, var(--soft), #fff); }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); background: #e6eef5; padding: 6px 12px; border-radius: 999px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; letter-spacing: -.02em; margin: 18px 0 16px; max-width: 18ch; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 60ch; margin: 0 0 28px; }
+  .btn { display: inline-block; padding: 13px 22px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+  .btn.primary { background: var(--navy); color: #fff; }
+  .btn.ghost { border: 1px solid var(--line); color: var(--ink); margin-left: 10px; }
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(26px, 3.4vw, 36px); letter-spacing: -.01em; margin: 0 0 12px; }
+  .sub { color: var(--muted); max-width: 62ch; margin: 0 0 36px; }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .card { border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: #fff; }
+  .card h3 { margin: 10px 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card img { width: 64px; height: 64px; object-fit: contain; }
+  .product { display: grid; gap: 32px; grid-template-columns: 1.2fr 1fr; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 32px; background: linear-gradient(135deg, #fff7fa, #fff); }
+  .product .tag { color: var(--rose); font-weight: 700; letter-spacing: .04em; }
+  .product ul { padding-left: 18px; color: var(--muted); }
+  .product img { width: 100%; max-width: 320px; justify-self: center; }
+  .facts { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .fact { background: var(--soft); border-radius: 12px; padding: 18px; }
+  .fact b { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+  .fact span { font-size: 17px; font-weight: 600; }
+  .contact { background: var(--navy); color: #fff; border-radius: 18px; padding: 40px; }
+  .contact a { color: var(--gold); }
+  .contact p { color: #d6e2ec; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  .policy { font-size: 15px; color: var(--muted); }
+  .policy h3 { color: var(--ink); font-size: 17px; margin: 22px 0 4px; }
+  @media (max-width: 760px) {
+    nav { display: none; }
+    .product { grid-template-columns: 1fr; padding: 22px; }
+    .btn.ghost { margin: 10px 0 0; }
+    section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="mark">S</span>SALEUP</a>
+    <nav>
+      <a href="#what-we-do">What we do</a>
+      <a href="#chillboss">ChillBoss</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Gold Coast, Queensland</span>
+      <h1>Software that helps local businesses grow.</h1>
+      <p class="lead">SALEUP PTY LTD builds simple, affordable software for Australian small businesses — salons, clinics, trades, gyms and professional services — so owners spend less time on the phone and more time with customers.</p>
+      <a class="btn primary" href="#chillboss">Meet ChillBoss</a>
+      <a class="btn ghost" href="#contact">Contact us</a>
+    </div>
+  </section>
+
+  <section id="what-we-do">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">We design, build and run cloud software for appointment-based businesses, and help owners set it up.</p>
+      <div class="grid">
+        <div class="card"><img src="img/assistant.webp" alt="" width="64" height="64"><h3>AI receptionist</h3><p>Answers calls and messages 24/7, books appointments and passes on anything it can't handle.</p></div>
+        <div class="card"><img src="img/calendar.webp" alt="" width="64" height="64"><h3>Online booking</h3><p>A booking page and calendar so customers can book themselves, any time.</p></div>
+        <div class="card"><img src="img/crm-customers.webp" alt="" width="64" height="64"><h3>Customer management</h3><p>One place for every customer, their visits, notes and messages.</p></div>
+        <div class="card"><img src="img/sms-marketing.webp" alt="" width="64" height="64"><h3>SMS &amp; email marketing</h3><p>Reminders and campaigns that follow the Spam Act — every message includes an easy opt-out.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chillboss" style="padding-top:0">
+    <div class="wrap">
+      <div class="product">
+        <div>
+          <div class="tag">OUR PRODUCT</div>
+          <h2>ChillBoss — the AI front desk</h2>
+          <p class="sub" style="margin-bottom:16px">Relax, it's handled. ChillBoss gives every local business an AI receptionist on its own Australian number, plus booking, customer management, campaigns and Google review replies — in one simple app, available in English, Vietnamese, Korean and Chinese for owners.</p>
+          <ul>
+            <li>AI answers calls on a dedicated Australian number, or as backup when staff are busy</li>
+            <li>Tells callers they're speaking with an AI and that calls may be recorded</li>
+            <li>Plans from A$99 per month, cancel anytime</li>
+          </ul>
+        </div>
+        <img src="img/assistant.webp" alt="ChillBoss AI receptionist illustration">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="background:var(--soft)">
+    <div class="wrap">
+      <h2>About SALEUP</h2>
+      <p class="sub">SALEUP PTY LTD is an Australian private company registered with ASIC in 2020 and based on the Gold Coast, Queensland. We work with Australian businesses and their customers, and we keep their data in line with the Australian Privacy Principles.</p>
+      <div class="facts">
+        <div class="fact"><b>Legal name</b><span>SALEUP PTY LTD</span></div>
+        <div class="fact"><b>ABN</b><span>74 642 236 511</span></div>
+        <div class="fact"><b>ACN</b><span>642 236 511</span></div>
+        <div class="fact"><b>Location</b><span>Hope Island QLD 4212</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Contact us</h2>
+        <p>Questions about ChillBoss or working with SALEUP? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:hello@saleup.com.au">hello@saleup.com.au</a><br>
+        Address: Unit 13, 6 Pendraat Parade, Hope Island QLD 4212, Australia</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" style="padding-top:0">
+    <div class="wrap policy">
+      <h2 style="color:var(--ink)">Privacy &amp; messaging</h2>
+      <h3>Privacy</h3>
+      <p>We handle personal information under the Privacy Act 1988 (Cth) and the Australian Privacy Principles. We collect only what we need to provide our services — account details of business owners, and customer records, messages and call recordings that our business customers store in ChillBoss on their own behalf. We never sell personal information. Some data is processed by trusted cloud and AI providers, which may be located overseas. To access or correct your information, or to make a complaint, email hello@saleup.com.au. If you're not satisfied with our response you can contact the Office of the Australian Information Commissioner (OAIC).</p>
+      <h3>SMS and calls</h3>
+      <p>Messages sent through ChillBoss are sent by or on behalf of the business you dealt with. You can opt out of marketing messages at any time by replying STOP or using the unsubscribe link. Calls answered by the ChillBoss AI receptionist identify themselves as AI and may be recorded for quality and to help the business follow up.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> SALEUP PTY LTD · ABN 74 642 236 511</span>
+    <span><a href="#privacy">Privacy</a> · <a href="#contact">Contact</a></span>
+  </div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
